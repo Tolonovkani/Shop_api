@@ -11,6 +11,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+
 @receiver(pre_save, sender=Category)
 def category_pre_save(sender, instance, *args, **kwargs):
     print('*********************')
